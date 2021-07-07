@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Παράδειγμα Φόρμας</title>
+
+    <link rel="stylesheet" href="mycss.css"> 
+    <script src="list.js" defer></script>
+
+</head>
+<body>
+    <form id="myform" onsubmit="return(validate());"  method="post">
+
+        <!--Προσωπικά Στοιχεία-->
+        <br>
+        <fieldset>
+            <legend>Προσωπικά Στοιχεία</legend>
+            <label for="name">*Όνομα:</label>
+            <input id="name" type="text" name="name" placeholder="Δώσε όνομα" autofocus size="30" required><br>
+            <label for="surname">*Επίθετο:</label>
+            <input id="surname" type="text" name="surname" placeholder="Δώσε επίθετο" size="30" required><br>
+            <label for="e-mail">*E-mail:</label>
+            <input id="e-mail" type="email" name="e-mail"  size="30" required><br>
+            <label for="age">Ηλικία:</label>
+            <input id="age" type="number" name="age" min="17" max="150" readonly><br>
+            <input type="radio" name="gender" >Άνδρας</input>
+            <input type="radio" name="gender" >Γυναίκα</input><br>
+            <label for="date">*Ημερομηνία Γέννησης:</label>
+            <input type="date" id="date" name="date" required>
+        </fieldset>
+
+        <!--Κατοικία-->
+        <br>
+        <fieldset>
+            <legend>Κατοικία</legend>
+            <label for="address">*Διεύθυνση:</label>
+            <input id="address" type="text" name="address" placeholder="π.χ Δηλου 12" size="30" required><br>
+            <label for="city">*Πόλη:</label>
+            <input id="city" type="text" name="city" placeholder="π.χ Θεσσαλονίκη" size="20" required>
+            <label for="zip">Ταχ. Κωδ.:</label>
+            <input id="zip" type="text" name="zip"  size="15" ><br>
+            <label for="per">*Περιφέρεια:</label>
+            <input id="per" type="text" name="per" required><br>
+        </fieldset>
+
+     <!--Γνώσεις-->
+     <br>
+     <fieldset>
+        <legend>Γνώσεις</legend>
+        <div class="skills">Σημειώστε τις γνώσεις σας (0=καθόλου, 5=άριστες)</div>
+        <label for="html">ΗTML5</label>
+        <input type="range" id="html" min="0" max="5" step="1" value="5" name="html">
+        <output id="showHtml"></output><br>
+        <label for="css">CSS3</label>
+        <input type="range" id="css" min="0" max="5" step="1" value="5" name="css">
+        <output id="showCss"></output><br>
+        <label for="js">JavaScript</label>
+        <input type="range" id="js" min="0" max="5" step="1" value="5" name="js">
+        <output id="showJs"></output><br>
+    </fieldset>
+
+    <!--Ενδιαφέροντα-->
+    <br>
+    <fieldset>
+        <legend>Ενδιαφέροντα</legend>
+        <label for="item1">Μου αρέσει...</label><br>
+        <input type="checkbox" id="item1" name="item1" value="nature" >
+        <label for="item1">Η ζωή στη φύση</label><br>
+        <input type="checkbox" id="item2" name="item2" value="reading" >
+        <label for="item2">Tο διάβασμα</label><br>
+        <input type="checkbox" id="item3" name="item3" value="sports" >
+        <label for="item3">Ο αθλητισμός</label><br>
+    </fieldset>
+
+    <br>
+    <fieldset>
+         <!--Βιογραφικό-->
+        <legend>Βιογραφικό</legend>
+        <label for="cv">Αναβάστε το Βιογραφικό σας (αρχείο pdf)</label><br>
+        <input type="file" id="cv" accept=".pdf" name="cv" style="display: none;">
+        <input type="button" value="Αναζήτηση Βιογραφικού" onclick="document.querySelector('#cv').click();">
+        <output id="showFile"></output>
+    </fieldset>
+
+        <br>
+        <input type="submit" value="Υποβολή Στοιχείων">΄
+        <output id="message"></output>
+    </form>
+    <br>
+    <br>
+    
+    <footer id="marios">   
+        Posted by:Marios Balliu <br>
+        Copyright &#169; All rights reserved 2021<br>
+        Η συγκεκριμένη ιστοσελίδα φτιάχτηκε στα πλαίσια του μαθήματος "Εισαγωγή στην ανάπτυξη ιστοσελίδων με HTML5, CSS3, Javascript".
+    </footer> 
+
+    <br>
+    <br>
+
+</body>
+</html>
